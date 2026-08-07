@@ -151,11 +151,53 @@
   // ============================================================
   //  WORKBENCH — Theme & Icons (Catppuccin + Material Icons)
   // ============================================================
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorTheme": "Default Dark Modern",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.enablePreview": false,
   "workbench.list.smoothScrolling": true,
   "workbench.tree.indent": 16,
+
+  // ---- Black & gold accent (anime aesthetic) ----
+  // Layers a near-black background + gold UI accents over the base theme.
+  "workbench.colorCustomizations": {
+    "editor.background": "#0a0a0b",
+    "sideBar.background": "#0d0d0f",
+    "sideBarSectionHeader.background": "#0d0d0f",
+    "activityBar.background": "#0a0a0b",
+    "activityBar.foreground": "#e6b450",
+    "activityBar.inactiveForeground": "#7a6a3a",
+    "activityBar.activeBorder": "#e6b450",
+    "panel.background": "#0a0a0b",
+    "titleBar.activeBackground": "#0a0a0b",
+    "titleBar.activeForeground": "#e6b450",
+    "statusBar.background": "#0d0d0f",
+    "statusBar.foreground": "#e6b450",
+    "statusBar.noFolderBackground": "#0d0d0f",
+    "tab.activeBackground": "#141414",
+    "tab.activeForeground": "#f5d98b",
+    "tab.activeBorderTop": "#e6b450",
+    "editorGroupHeader.tabsBackground": "#0a0a0b",
+    "editorCursor.foreground": "#ffd369",
+    "editor.selectionBackground": "#e6b45033",
+    "editor.lineHighlightBackground": "#ffffff08",
+    "list.activeSelectionForeground": "#e6b450",
+    "list.highlightForeground": "#e6b450",
+    "focusBorder": "#e6b450",
+    "button.background": "#e6b450",
+    "button.foreground": "#0a0a0b",
+    "badge.background": "#e6b450",
+    "badge.foreground": "#0a0a0b",
+    "progressBar.background": "#e6b450",
+    "textLink.foreground": "#e6b450",
+    "panelTitle.activeBorder": "#e6b450",
+    "scrollbarSlider.activeBackground": "#e6b45066"
+  },
+  // Gentle gold tint on keywords/functions; other syntax colors stay readable.
+  "editor.tokenColorCustomizations": {
+    "keywords": "#e6b450",
+    "functions": "#ffd369",
+    "types": "#d7b877"
+  },
 
   // ============================================================
   //  ERROR LENS
@@ -207,16 +249,13 @@
     "style": {
       "background-position": "100% 100%",
       "background-repeat": "no-repeat",
-      "background-size": "35% auto",
-      "opacity": 0.12
+      "background-size": "42% auto",
+      "opacity": 0.16
     },
     "images": [
-      // Bundled wallpaper: assets/wallpaper/anime-verses.png
-      // The Background extension needs an ABSOLUTE file:// path — replace the
-      // path below with the absolute location of this repo on your machine.
-      //   macOS/Linux: "file:///Users/you/VS-Anime-Theme/assets/wallpaper/anime-verses.png"
-      //   Windows:     "file:///C:/Users/you/VS-Anime-Theme/assets/wallpaper/anime-verses.png"
-      "file:///ABSOLUTE/PATH/TO/VS-Anime-Theme/assets/wallpaper/anime-verses.png"
+      // Your wallpaper (Josh's image). To use a different one, swap this
+      // absolute file:// path — keep it somewhere permanent like ~/Pictures.
+      "file:///Users/joshuahilarion/Downloads/8E615F7E-6B24-425B-9374-EBF250B368CF_1_102_o.jpeg"
     ],
     "interval": 0,
     "random": false
@@ -225,7 +264,7 @@
   // flip "enabled" to true if you prefer a whole-window wash instead.
   "background.fullscreen": {
     "enabled": false,
-    "image": "file:///ABSOLUTE/PATH/TO/VS-Anime-Theme/assets/wallpaper/anime-verses.png",
+    "image": "file:///Users/joshuahilarion/Downloads/8E615F7E-6B24-425B-9374-EBF250B368CF_1_102_o.jpeg",
     "opacity": 0.1,
     "size": "cover",
     "position": "center"
