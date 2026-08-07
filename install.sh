@@ -13,7 +13,14 @@
 # Usage:
 #   cd into this repo, then:  bash install.sh
 #
+#   To use YOUR OWN image as the wallpaper, pass its path:
+#     bash install.sh "/Users/you/Downloads/my-anime-pic.jpeg"
+#   (If you don't pass one, the bundled collage wallpaper is used.)
+#
 set -euo pipefail
+
+# Optional first argument: a custom wallpaper image to use instead of the bundle.
+CUSTOM_WALLPAPER="${1:-}"
 
 # ------------------------------------------------------------------
 # Locate this repo (so the script works no matter where you cloned it)
@@ -43,6 +50,16 @@ mkdir -p "$USER_DIR" "$SNIPPETS_DIR"
 # 1. Wallpaper -> ~/Pictures, and compute its absolute file:// URL
 # ------------------------------------------------------------------
 echo "==> [1/5] Installing wallpaper"
+# If the user passed their own image, use that; otherwise use the bundled one.
+if [[ -n "$CUSTOM_WALLPAPER" ]]; then
+  if [[ -f "$CUSTOM_WALLPAPER" ]]; then
+    WALLPAPER_SRC="$CUSTOM_WALLPAPER"
+    echo "    Using your image: $CUSTOM_WALLPAPER"
+  else
+    echo "    !! Your image was not found at: $CUSTOM_WALLPAPER"
+    echo "       Falling back to the bundled collage wallpaper."
+  fi
+fi
 if [[ -f "$WALLPAPER_SRC" ]]; then
   cp "$WALLPAPER_SRC" "$WALLPAPER_DEST"
   echo "    Copied wallpaper to: $WALLPAPER_DEST"
