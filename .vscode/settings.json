@@ -69,12 +69,7 @@
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "explicit"
   },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "eslint.run": "onType",
   "prettier.singleQuote": true,
   "prettier.semi": true,
@@ -151,7 +146,7 @@
   // ============================================================
   //  WORKBENCH — Theme & Icons (Catppuccin + Material Icons)
   // ============================================================
-  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.colorTheme": "Dark Modern",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.editor.enablePreview": false,
   "workbench.list.smoothScrolling": true,
@@ -245,7 +240,7 @@
   // ============================================================
   "background.enabled": true,
   "background.editor": {
-    "useFront": false,
+    "useFront": true,
     "style": {
       "background-position": "100% 100%",
       "background-repeat": "no-repeat",
@@ -253,9 +248,12 @@
       "opacity": 0.16
     },
     "images": [
-      // Your wallpaper (Josh's image). To use a different one, swap this
-      // absolute file:// path — keep it somewhere permanent like ~/Pictures.
-      "file:///Users/joshuahilarion/Downloads/8E615F7E-6B24-425B-9374-EBF250B368CF_1_102_o.jpeg"
+      // Bundled wallpaper: assets/wallpaper/anime-verses.png
+      // The Background extension needs an ABSOLUTE file:// path — replace the
+      // path below with the absolute location of this repo on your machine.
+      //   macOS/Linux: "file:///Users/you/VS-Anime-Theme/assets/wallpaper/anime-verses.png"
+      //   Windows:     "file:///C:/Users/you/VS-Anime-Theme/assets/wallpaper/anime-verses.png"
+      "file:///ABSOLUTE/PATH/TO/VS-Anime-Theme/assets/wallpaper/anime-verses.png"
     ],
     "interval": 0,
     "random": false
@@ -264,10 +262,12 @@
   // flip "enabled" to true if you prefer a whole-window wash instead.
   "background.fullscreen": {
     "enabled": false,
-    "image": "file:///Users/joshuahilarion/Downloads/8E615F7E-6B24-425B-9374-EBF250B368CF_1_102_o.jpeg",
+    "image": "file:///ABSOLUTE/PATH/TO/VS-Anime-Theme/assets/wallpaper/anime-verses.png",
     "opacity": 0.1,
     "size": "cover",
-    "position": "center"
+    "position": "center",
+    "interval": 0,
+    "random": false
   },
 
   // ============================================================
