@@ -25,6 +25,22 @@ an anime-flavoured ambience (custom wallpaper + Discord Rich Presence).
 
 ## Install
 
+### Option 0 — One command (macOS, easiest) ⭐
+
+Clone the repo, then run the installer. It copies the wallpaper, fills in the
+absolute path **for you**, installs settings/snippets/keybindings into your VS
+Code User folder, and installs every extension — backing up anything it would
+replace:
+
+```bash
+git clone https://github.com/JoshHil97/VS-Anime-Theme.git
+cd VS-Anime-Theme
+bash install.sh
+```
+
+Then install the JetBrains Mono font and reload VS Code (the script reminds you).
+Prefer to do it by hand? Use the options below.
+
 ### Option A — Per project (recommended)
 
 Copy the repo files into your project root. The `.vscode/` folder, `AGENTS.md`,
