@@ -19,6 +19,7 @@ an anime-flavoured ambience (custom wallpaper + Discord Rich Presence).
 | `CLAUDE.md` | Thin pointer to `AGENTS.md` for tools that read `CLAUDE.md`. |
 | `tsconfig.json` | Backs "TS strict mode" — the real enforcement of every strict flag. |
 | `.prettierrc.json` | Prettier rules matching the editor settings. |
+| `assets/wallpaper/anime-verses.png` | The bundled anime + scripture wallpaper wired into the Background extension. |
 
 ---
 
@@ -81,19 +82,24 @@ Install the **JetBrains Mono** font from
 
 ### Background wallpaper (`shalldie.background`)
 
-Open `.vscode/settings.json` and replace the placeholder URL under
-`background.editor.images` (and, if you enable it, `background.fullscreen.image`)
-with your own wallpaper:
+A wallpaper ships with this repo at **`assets/wallpaper/anime-verses.png`**
+(anime characters + scripture collage). The Background extension requires an
+**absolute `file://` path**, so open `.vscode/settings.json` and replace
+`/ABSOLUTE/PATH/TO/` under `background.editor.images` (and, if you enable it,
+`background.fullscreen.image`) with this repo's real location:
 
 ```jsonc
 "images": [
-  "file:///Users/you/Pictures/wallpapers/anime-hero.png"  // local file
-  // or "https://your-host.example.com/anime.png"          // remote URL
+  // macOS / Linux
+  "file:///Users/you/VS-Anime-Theme/assets/wallpaper/anime-verses.png"
+  // Windows:
+  // "file:///C:/Users/you/VS-Anime-Theme/assets/wallpaper/anime-verses.png"
 ]
 ```
 
-Opacity is preset to **0.12** (within your 10–15 % target) so code stays fully
-readable. The Background extension patches VS Code's files, so after changing the
+Tip: run `pwd` (macOS/Linux) inside the repo to get the absolute path. Swap in
+any other image the same way. Opacity is preset to **0.12** (within your
+10–15 % target) so code stays fully readable. The Background extension patches VS Code's files, so after changing the
 wallpaper you'll see a one-time **"VS Code installation appears corrupt"**
 warning — click the gear → **Don't Show Again**. It's expected; the extension
 re-applies itself on each VS Code update (just run its *Reload* command).

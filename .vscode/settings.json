@@ -211,11 +211,12 @@
       "opacity": 0.12
     },
     "images": [
-      // TODO: swap this placeholder for your own anime wallpaper.
-      // Local file example (absolute path, file:// scheme required on some OSes):
-      //   "file:///Users/you/Pictures/wallpapers/anime-hero.png"
-      // Or a remote https URL:
-      "https://REPLACE-ME.example.com/anime-wallpaper-placeholder.png"
+      // Bundled wallpaper: assets/wallpaper/anime-verses.png
+      // The Background extension needs an ABSOLUTE file:// path — replace the
+      // path below with the absolute location of this repo on your machine.
+      //   macOS/Linux: "file:///Users/you/VS-Anime-Theme/assets/wallpaper/anime-verses.png"
+      //   Windows:     "file:///C:/Users/you/VS-Anime-Theme/assets/wallpaper/anime-verses.png"
+      "file:///ABSOLUTE/PATH/TO/VS-Anime-Theme/assets/wallpaper/anime-verses.png"
     ],
     "interval": 0,
     "random": false
@@ -224,7 +225,7 @@
   // flip "enabled" to true if you prefer a whole-window wash instead.
   "background.fullscreen": {
     "enabled": false,
-    "image": "https://REPLACE-ME.example.com/anime-wallpaper-placeholder.png",
+    "image": "file:///ABSOLUTE/PATH/TO/VS-Anime-Theme/assets/wallpaper/anime-verses.png",
     "opacity": 0.1,
     "size": "cover",
     "position": "center"
