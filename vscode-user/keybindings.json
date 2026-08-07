@@ -1,0 +1,133 @@
+// Custom keybindings — copy into your VS Code User folder as `keybindings.json`.
+// (Command Palette → "Preferences: Open Keyboard Shortcuts (JSON)")
+// macOS uses "cmd"; on Windows/Linux swap "cmd" for "ctrl" where noted.
+[
+  // ============================================================
+  //  FAST FILE NAVIGATION
+  // ============================================================
+  {
+    // Quick Open (files) — reinforce the default, plus a chord for symbols
+    "key": "cmd+p",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    // Go to symbol in workspace
+    "key": "cmd+t",
+    "command": "workbench.action.showAllSymbols"
+  },
+  {
+    // Jump between the last two files (like alt+tab for editors)
+    "key": "cmd+e",
+    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+  },
+  {
+    // Navigate back / forward through edit locations
+    "key": "cmd+[",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.navigateForward"
+  },
+  {
+    // Reveal the current file in the Explorer sidebar
+    "key": "cmd+shift+e",
+    "command": "workbench.files.action.showActiveFileInExplorer"
+  },
+  {
+    // Breadcrumb navigation focus
+    "key": "cmd+shift+.",
+    "command": "breadcrumbs.focusAndSelect"
+  },
+
+  // ============================================================
+  //  MULTI-CURSOR EDITING
+  // ============================================================
+  {
+    // Add cursor to next matching selection
+    "key": "cmd+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    // Select ALL matching occurrences at once
+    "key": "cmd+shift+l",
+    "command": "editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+  {
+    // Add cursor above / below
+    "key": "cmd+alt+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+alt+down",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    // Add a cursor at every line of the current selection
+    "key": "cmd+alt+i",
+    "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus"
+  },
+  {
+    // Skip the current find match and move the cursor to the next
+    "key": "cmd+k cmd+d",
+    "command": "editor.action.moveSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+
+  // ============================================================
+  //  TERMINAL — split & focus
+  // ============================================================
+  {
+    // Split the active terminal
+    "key": "cmd+\\",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
+  {
+    // Toggle the integrated terminal panel
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    // Create a brand-new terminal
+    "key": "cmd+shift+`",
+    "command": "workbench.action.terminal.new"
+  },
+  {
+    // Move focus between split terminal panes
+    "key": "cmd+alt+left",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+alt+right",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    // Maximize / restore the terminal panel
+    "key": "cmd+k z",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+
+  // ============================================================
+  //  EDITING QUALITY-OF-LIFE
+  // ============================================================
+  {
+    // Format document on demand
+    "key": "cmd+k cmd+f",
+    "command": "editor.action.formatDocument",
+    "when": "editorTextFocus"
+  },
+  {
+    // Duplicate line down
+    "key": "cmd+shift+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus"
+  }
+]

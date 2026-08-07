@@ -1,0 +1,132 @@
+{
+  // ============================================================
+  //  TypeScript component & module boilerplate snippets
+  //  Scope: TypeScript / TSX. Type the prefix + Tab to expand.
+  // ============================================================
+
+  "TS: Typed function component (class-free)": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "tsfc",
+    "body": [
+      "export interface ${1:ComponentName}Props {",
+      "  ${2:/* props */}",
+      "}",
+      "",
+      "export function ${1:ComponentName}(props: ${1:ComponentName}Props) {",
+      "  const { ${3} } = props;",
+      "  ${0}",
+      "  return null;",
+      "}",
+      ""
+    ],
+    "description": "Typed props interface + function component"
+  },
+
+  "TS: Class with constructor DI": {
+    "scope": "typescript",
+    "prefix": "tsclass",
+    "body": [
+      "export class ${1:ServiceName} {",
+      "  constructor(private readonly ${2:deps}: ${3:Deps}) {}",
+      "",
+      "  public ${4:method}(): ${5:void} {",
+      "    ${0}",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "Class with dependency-injected constructor"
+  },
+
+  "TS: Async function with try/catch": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "tsasync",
+    "body": [
+      "export async function ${1:doThing}(${2:args}): Promise<${3:Result}> {",
+      "  try {",
+      "    ${0}",
+      "  } catch (error) {",
+      "    console.error('[${1:doThing}] failed:', error);",
+      "    throw error;",
+      "  }",
+      "}",
+      ""
+    ],
+    "description": "Async function wrapped in try/catch"
+  },
+
+  "TS: Discriminated union + type guard": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "tsunion",
+    "body": [
+      "export type ${1:Shape} =",
+      "  | { kind: '${2:a}'; ${3:value}: ${4:string} }",
+      "  | { kind: '${5:b}'; ${6:value}: ${7:number} };",
+      "",
+      "export function is${2/(.*)/${1:/capitalize}/}(shape: ${1:Shape}): shape is Extract<${1:Shape}, { kind: '${2:a}' }> {",
+      "  return shape.kind === '${2:a}';",
+      "}",
+      ""
+    ],
+    "description": "Discriminated union with a narrowing type guard"
+  },
+
+  "TS: Zod-style schema + inferred type": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "tszod",
+    "body": [
+      "import { z } from 'zod';",
+      "",
+      "export const ${1:entity}Schema = z.object({",
+      "  ${2:id}: z.string(),",
+      "  ${3:name}: z.string().min(1),",
+      "});",
+      "",
+      "export type ${1/(.*)/${1:/capitalize}/} = z.infer<typeof ${1:entity}Schema>;",
+      ""
+    ],
+    "description": "Zod object schema plus inferred TS type"
+  },
+
+  "TS: Custom React hook": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "tshook",
+    "body": [
+      "import { useState, useEffect } from 'react';",
+      "",
+      "export function use${1:Feature}(${2:params}) {",
+      "  const [${3:state}, set${3/(.*)/${1:/capitalize}/}] = useState<${4:Type}>(${5:initial});",
+      "",
+      "  useEffect(() => {",
+      "    ${0}",
+      "  }, [${6}]);",
+      "",
+      "  return { ${3:state} } as const;",
+      "}",
+      ""
+    ],
+    "description": "Custom React hook with state + effect"
+  },
+
+  "TS: Barrel export": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "tsbarrel",
+    "body": ["export * from './${1:module}';", "$0"],
+    "description": "Re-export (barrel) line"
+  },
+
+  "TS: Result type helper": {
+    "scope": "typescript",
+    "prefix": "tsresult",
+    "body": [
+      "export type Result<T, E = Error> =",
+      "  | { ok: true; value: T }",
+      "  | { ok: false; error: E };",
+      "",
+      "export const ok = <T>(value: T): Result<T, never> => ({ ok: true, value });",
+      "export const err = <E>(error: E): Result<never, E> => ({ ok: false, error });",
+      "$0"
+    ],
+    "description": "Rust-style Result<T, E> helper"
+  }
+}

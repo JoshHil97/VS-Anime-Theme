@@ -1,0 +1,35 @@
+{
+  // Recommended extensions for this workspace.
+  // VS Code will prompt to install these when the folder is opened,
+  // or run: "Extensions: Show Recommended Extensions" from the palette.
+  "recommendations": [
+    // ---- Theme & Icons ----
+    "catppuccin.catppuccin-vsc",          // Catppuccin theme
+    "catppuccin.catppuccin-vsc-icons",    // Catppuccin icons (optional companion)
+    "pkief.material-icon-theme",          // Material Icon Theme
+
+    // ---- Git ----
+    "eamodio.gitlens",                    // GitLens
+
+    // ---- Diagnostics & DX ----
+    "usernamehw.errorlens",               // Error Lens (inline diagnostics)
+    "christian-kohler.path-intellisense", // Path Intellisense
+    "aaron-bond.better-comments",         // Better Comments
+
+    // ---- Formatting & Linting ----
+    "esbenp.prettier-vscode",             // Prettier
+    "dbaeumer.vscode-eslint",             // ESLint
+
+    // ---- Markup / Web ----
+    "formulahendry.auto-rename-tag",      // Auto Rename Tag
+
+    // ---- Shopify / Liquid ----
+    "shopify.theme-check-vscode",         // Shopify Liquid (Theme Check + Liquid language)
+    "sissel.shopify-liquid",              // Liquid syntax highlighting (companion)
+
+    // ---- Fun / Ambience (anime setup) ----
+    "shalldie.background",                // Background (custom wallpaper)
+    "icrawl.discord-vscode"               // Discord Rich Presence
+  ],
+  "unwantedRecommendations": []
+}
